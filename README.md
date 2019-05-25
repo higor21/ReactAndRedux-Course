@@ -6,6 +6,10 @@
 
 `git clone https://github.com/higor21/ReactAndRedux-Course.git`
 
+### Enter the Project Folder You Want
+
+`cd name_of_the_folder`
+
 ### Installing the Dependencies
 
 `npm install`
