@@ -5,16 +5,22 @@ import ReactDOM from 'react-dom'
 //import MC,{F1 as Fisrt1, F2 as Second2} from './componentes/MultiComponentes'
 //import {CompA, CompB as B} from './componentes/DoisComponentes'
 //import CwF from './componentes/ComponentWithFunction'
-import {Parent as P} from './componentes/ComponentParent'
-import C from './componentes/ComponentChild'
+//import {Parent as P} from './componentes/ComponentParent'
+//import C from './componentes/ComponentChild'
+//import CompClass from './componentes/ComponentClass'
+//import Contador from './componentes/Contador'
+import ContadorByFunction from './componentes/ContadorByFunction'
 
 const element = document.getElementById('root')
 ReactDOM.render(
 
+    <ContadorByFunction />
+    //<CompClass value="Other new value"/>
+
     // way to pass data from child to parent
-    <P name_p="Valdir" title="Pai">
+    /*<P name_p="Valdir" title="Pai">
         <C name_c="Higor"/>
-    </P>
+    </P>*/
     
     // nothing
     /* <CwF /> */
