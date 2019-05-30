@@ -16,11 +16,13 @@
 
 ### Starting the Server
 
-`npm start`
+`npm run dev`
 
-## 2. Starting the "Backend"
+> Obs.: Keep in mind that you need to perform these steps in frontend and backend applications. In addition, you also have to start the mongo with the following command
 
-> These steps will still be described
+`sudo mongod`
+
+If you encountered an error adding the above command, try creating a '/ data / db' folder. It is required to execute the command
 
 ## Credts
 
