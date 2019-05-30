@@ -2,20 +2,20 @@ import React, {Component} from 'react'
 
 export default class Grid extends Component { 
     addClasses(numbers){
-        const opts = (numbers) ? numbers.split(' ') : []
+        const cols = (numbers) ? numbers.split(' ') : []
 
         let classes = ''
-        classes += (opts[0]) ? `col-xs-${opts[0]}` : '';
-        classes += (opts[1]) ? `col-sm-${opts[1]}` : '';
-        classes += (opts[2]) ? `col-md-${opts[2]}` : '';
-        classes += (opts[3]) ? `col-lg-${opts[3]}` : '';
+        classes += (cols[0]) ? `col-xs-${cols[0]} ` : '';
+        classes += (cols[1]) ? `col-sm-${cols[1]} ` : '';
+        classes += (cols[2]) ? `col-md-${cols[2]} ` : '';
+        classes += (cols[3]) ? `col-lg-${cols[3]} ` : '';
 
         return classes
     }
 
     render(){
-        return <div className={this.addClasses(this.props.)}>
-
+        return <div className={this.addClasses(this.props.cols || 12)}>
+            {this.props.children}
         </div>
     }
 }
