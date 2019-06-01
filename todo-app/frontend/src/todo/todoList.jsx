@@ -18,10 +18,23 @@ export default props => {
         const list = props.list || []
         return list.map(todo => (
                 <tr key={todo._id} >
-                    <td>{incrementId()}</td>
-                    <td>{todo.description}</td>
-                    <td>
+                    <td className="id_of_desc"> {incrementId()} </td>
+                    <td className={todo.done ? 'disabled' : ''} >{todo.description}</td>
+                    <td className="space_blocks btns_icons">
                         <IconButton
+                            hide = {todo.done}
+                            style='success'
+                            icon='check'
+                            onClick={() => props.handleMarkAsDone(todo)}
+                        />
+                        <IconButton 
+                            hide = {!todo.done}
+                            style='warning'
+                            icon='undo'
+                            onClick={() => props.handleMarkAsPending(todo)}
+                        />
+                        <IconButton
+                            hide = {!todo.done}
                             style='danger'
                             icon='trash-o'
                             onClick={() => props.handleRemove(todo)}
@@ -32,12 +45,12 @@ export default props => {
     }
 
     return (
-            <table className='table'>
+            <table className='table table_space'>
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th className="id_of_desc">Id</th>
                         <th>Description</th>
-                        <th>Ações</th>
+                        <th className="btns_icons">Ações</th>
                     </tr>
                 </thead>
                 <tbody>

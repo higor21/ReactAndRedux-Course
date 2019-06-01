@@ -1,0 +1,22 @@
+.disabled {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.space_blocks > *{
+    margin-left: 5px;
+}
+
+.table_space {
+    position: relative;
+    top: 30px;
+}
+
+.id_of_desc {
+    width: 10px;
+}
+
+.btns_icons {
+    text-align: center;
+    width: 120px;
+}
