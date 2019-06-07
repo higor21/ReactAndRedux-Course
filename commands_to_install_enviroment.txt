@@ -1,0 +1,121 @@
+    1  cd multiprova-api/
+    2  npm i
+    3  docker-compose up -d
+    4  docker
+    5  docker-compose up -d
+    6  sudo systemctl enable docker
+    7  sudo systemctl start docker
+    8  docker-compose up -d
+    9  sudo usermod -a -G docker $USER
+   10  docker-compose up -d
+   11  sudo docker-compose up -d
+   12  docker kill $(docker ps -q)
+   13  sudo docker kill $(docker ps -q)
+   14  sudo docker rm $(docker ps -a -q)
+   15  sudo docker-compose up -d
+   16  killall node
+   17  docker ps
+   18  sudo docker ps
+   19  sudo docker kill $(docker ps -q)
+   20  sudo docker-compose up -d
+   21  reboot
+   22  cd multiprova-instanciamento/
+   23  npm i
+   24  sudo apt install nodejs npm
+   25  sudo dpkg --configure -a
+   26  sudo apt install nodejs npm
+   27  sudo apt update
+   28  sudo apt install nodejs npm
+   29  sudo apt install nodejs
+   30  node --version
+   31  npm --version
+   32  sudo apt install npm
+   33  npm --version
+   34  sudo apt-get update
+   35  sudo apt install docker.io
+   36  docker --version
+   37  sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   38  sudo apt install curl
+   39  sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   40  sudo chmod +x /usr/local/bin/docker-compose
+   41  docker-compose --version
+   42  git --version
+   43  firefox &
+   44  cd Documentos/
+   45  ls
+   46  mkdir CAPES
+   47  cd CAPES/
+   48  ls
+   49  git clone git@gitlab.com:tapioca/multiprova/multiprova-web.git
+   50  ls
+   51  git clone git@gitlab.com:tapioca/multiprova/multiprova-web.git
+   52  sudo git clone git@gitlab.com:tapioca/multiprova/multiprova-web.git
+   53  git clone https://gitlab.com/tapioca/multiprova/multiprova-web.git
+   54  l
+   55  git clone https://gitlab.com/tapioca/multiprova/multiprova-api.git
+   56  l
+   57  git clone https://gitlab.com/tapioca/multiprova/multiprova-instanciamento.git
+   58  l
+   59  cd multiprova-web/
+   60  npm i
+   61  cd ..
+   62  cd multiprova-instanciamento/
+   63  npm start
+   64  git checkout develop
+   65  npm start
+   66  sudo npm i
+   67  npm start
+   68  cd Documentos/CAPES/
+   69  ls
+   70  cd multiprova-api/
+   71  ls
+   72  docker-compose up -d
+   73  docker ps
+   74  docker-compose -a
+   75  docker ps -a
+   76  docker ps -a -q
+   77  sudo docker kill $(docker ps -q)
+   78  sudo docker rm $(docker ps -a -q)
+   79  docker-compose -a
+   80  docker-compose up -d
+   81  sudo apt-get purge docker
+   82  docker --version
+   83  sudo apt-get purge docker-ce
+   84  sudo apt-get purge docker
+   85  docker --version
+   86  sudo apt-get uninstall docker
+   87  sudo apt-get remove docker
+   88  docker --version
+   89  docker
+   90  dpkg -l | grep -i docker
+   91  sudo systemctl restart docker
+   92  docker ps
+   93  docker-compose up -d
+   94  docker rm -f $(docker ps -aq)
+   95  docker-compose up -d
+   96  docker rm -fv $(docker ps -aq)
+   97  sudo lsof -i -P -n | grep 5672
+   98  ps -ef
+   99  sudo kill 1483
+  100  sudo lsof -i -P -n | grep 5672
+  101  docker-compose up -d
+  102  l
+  103  docker ps
+  104  npm run start-n
+  105  git checkout dev
+  106  git checkout develop
+  107  npm run start-n
+  108  sudo npm i
+  109  npm run start-n
+  110  sudo apt updatesudo apt install software-properties-common apt-transport-https wget
+  111  sudo apt update
+  112  sudo apt install code
+  113  code
+  114  ls
+  115  code .
+  116  cd ../multiprova-web/
+  117  npm start config educaio
+  118  sudo npm i
+  119  npm start config educaio
+  120  history
+  121  history > commands_to_install_enviroment.txt
