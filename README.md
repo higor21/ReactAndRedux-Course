@@ -1,6 +1,6 @@
 # React And Redux Course - React.js App Starter
 
-Here are my projects developed in the course. Among them, there're TodoList aplication, 
+Here are my projects developed in the course. Among them, there are TodoList, calculator and cycle payment applications
 
 ## 1. Steps to start
 
