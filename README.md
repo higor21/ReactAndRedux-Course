@@ -1,5 +1,7 @@
 # React And Redux Course - React.js App Starter
 
+Here are my projects developed in the course. Among them, there're TodoList aplication, 
+
 ## 1. Steps to start
 
 ### Cloning the Repository
