@@ -1,11 +1,12 @@
 import React from 'react'
-import IconButton from '../template/iconButton';
+import { connect } from 'react-redux'
 
+import IconButton from '../template/iconButton';
 
 // toda vida q tu for retornar algo sem a função 'return' não coloque 
 // a merda de chaves ({}), sempre com parêntes seu MERDA!!!
 
-export default props => {    
+const TodoList = props => {    
 
     let i = 0;
 
@@ -59,3 +60,6 @@ export default props => {
             </table>
     )
 }
+
+const mapStateToProps = state => ({list: state.todo.list})
+export default connect(mapStateToProps)(TodoList)
