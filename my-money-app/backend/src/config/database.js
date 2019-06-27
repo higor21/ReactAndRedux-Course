@@ -5,7 +5,12 @@ const mongoose = require('mongoose')
     encontra-se depreciado
 */
 mongoose.Promise = global.Promise
-module.exports = mongoose.connect('mongodb://localhost/mymoney')
+module.exports =  mongoose.connect('mongodb://localhost/mymoney').then(
+    ()=> console.log('connected to db')
+).catch(
+    (err)=> console.error(err)
+);
+
 
 /* redefine as mensagens de erro para Português */
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
