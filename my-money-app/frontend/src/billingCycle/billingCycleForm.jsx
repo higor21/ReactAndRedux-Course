@@ -3,15 +3,26 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 /* reduxForm ~> decora o componente para ligar o componente como redux Form */
-import { reduxForm, Field } from 'redux-form'
+import { reduxForm, Field, formValueSelector } from 'redux-form'
 import CustomInput from '../common/form/labelAdInput'
 import { init } from './billingCycleActions'
+import ItemList from './ItemList'
+import Summary from './summary'
 
 class BillingCycleForm extends Component {
     
+    calculateSummary(){
+        const sum = (a, b) => a + b
+        return {
+            sumOfCredits: this.props.credits.map(c => +c.value || 0).reduce(sum),
+            sumOfDebts: this.props.debts.map(d => +d.value || 0).reduce(sum)
+        }
+    }
+
     render(){
         /* o método 'heandleSubmit' foi incluido pela decoração do reduxForm (lá em baixo) */
-        const { handleSubmit, readOnly } = this.props
+        const { handleSubmit, readOnly, credits, debts } = this.props
+        const { sumOfCredits, sumOfDebts } = this.calculateSummary()
 
         return (
             <form role='form' onSubmit={handleSubmit}>
@@ -24,6 +35,15 @@ class BillingCycleForm extends Component {
                     />
                     <Field name='year' component={CustomInput} readOnly={readOnly}
                         label='Year' cols='12 2' placeholder='Informe o ano'
+                    />
+                    <Summary credit={sumOfCredits} debt={sumOfDebts}/>
+                    <ItemList
+                        cols='12 6' list={credits} readOnly={readOnly}
+                        field='credits' legend='Créditos'
+                    />
+                    <ItemList
+                        cols='12 6' list={debts} readOnly={readOnly}
+                        field='debts' legend='Débitos' showStatus={true}
                     />
                 </div>
                 <div className='box-footer'>
@@ -38,5 +58,11 @@ class BillingCycleForm extends Component {
 }
 /* destroyOnUnmout: não permite a destrução dos dados após o componente ser distruído */
 BillingCycleForm = reduxForm({form: 'billingCycleForm', destroyOnUnmount: false})(BillingCycleForm)
+
+const selector = formValueSelector('billingCycleForm')
+const mapStateToProps = state => ({
+    credits: selector(state, 'credits'),
+    debts: selector(state, 'debts'),
+})
 const mapDistatchToProps = dispatch => bindActionCreators({ init }, dispatch)
-export default connect(null, mapDistatchToProps)(BillingCycleForm)
+export default connect(mapStateToProps, mapDistatchToProps)(BillingCycleForm)
