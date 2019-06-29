@@ -42,6 +42,7 @@ BillingCycle.route('count', (req, res, next) => {
     $group: agrupa os dados, podendo também utilizar expressões matemáticas para isso.
 */
 BillingCycle.route('summary', (req, res, next) => {
+
     BillingCycle.aggregate({
         /*
             soma todos os cŕeditos e débitos de um único registro BillingCycle, 
