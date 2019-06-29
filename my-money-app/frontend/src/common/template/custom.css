@@ -8,3 +8,11 @@
     position: absolute;
     top: 10px !important;
 }
+
+button {
+    margin-left: 5px;
+}
+
+.table-actions {
+    width: 150px;
+}
