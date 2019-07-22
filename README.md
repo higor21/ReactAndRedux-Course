@@ -26,6 +26,6 @@
 
 If you encountered an error adding the above command, try creating a '/ data / db' folder. It is required to execute the command
 
-## Credts
+## Credts 
 
 [React + Redux: Fundamentos e Duas Apps do ABSOLUTO ZERO!](https://www.udemy.com/react-redux-pt/) course, by Udemy
