@@ -1,5 +1,0 @@
-  706  sudo kill $(sudo lsof -t -i:5672)
-  707  docker-compose up -d
-  708  docker-compose down
-  709  history 10
-  710  npm start
