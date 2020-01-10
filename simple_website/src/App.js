@@ -7,6 +7,8 @@ import Home from './components/Pages/Home'
 import About from './components/Pages/About'
 import Services from './components/Pages/Services';
 import Portfolio from './components/Pages/Portfolio';
+import Team from './components/Pages/Team';
+import Contact from './components/Pages/Contact';
 
 function App() {
   return (
@@ -31,6 +33,16 @@ function App() {
         <Route 
           path="/portfolio"
           component={Portfolio}
+        />
+
+        <Route 
+          path="/team"
+          component={Team}
+        />
+
+        <Route 
+          path="/contact"
+          component={Contact}
         />
       </PageWrapper>
     </Router>
