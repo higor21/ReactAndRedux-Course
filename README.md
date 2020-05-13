@@ -1,6 +1,6 @@
 # React And Redux Course
 
-> Here are my projects developed in the course. Among them, there are TodoList, calculator and cycle payment applications
+Here are my projects developed in the course. Among them, there are TodoList, Calculator and Cycle Payment applications
 
 ## 1. Steps to start
 
